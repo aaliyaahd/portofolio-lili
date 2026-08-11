@@ -1,4 +1,4 @@
-// 1. Dark/Light Theme Toggle
+// Dark/Light Theme Toggle
 const themeToggleBtn = document.getElementById('themeToggle');
 const root = document.documentElement;
 
@@ -8,23 +8,28 @@ themeToggleBtn.addEventListener('click', () => {
   
   root.setAttribute('data-theme', newTheme);
   
-  // Update icon
   themeToggleBtn.innerHTML = newTheme === 'dark' 
-    ? '<i class="fa-solid fa-moon"></i>' 
-    : '<i class="fa-solid fa-sun"></i>';
+    ? '<i class="fa-solid fa-sun"></i>' 
+    : '<i class="fa-solid fa-moon"></i>';
 });
 
-// 2. Responsive Mobile Menu (Garis Tiga Toggle)
-const menuToggleBtn = document.getElementById('menuToggle');
-const navLinks = document.getElementById('navLinks');
+// Active Link Highlight on Scroll
+const sections = document.querySelectorAll('section');
+const navLinks = document.querySelectorAll('.nav-link');
 
-menuToggleBtn.addEventListener('click', () => {
-  navLinks.classList.toggle('active');
-});
+window.addEventListener('scroll', () => {
+  let current = '';
+  sections.forEach(section => {
+    const sectionTop = section.offsetTop;
+    if (pageYOffset >= sectionTop - 150) {
+      current = section.getAttribute('id');
+    }
+  });
 
-// Close mobile menu when a link is clicked
-document.querySelectorAll('.nav-links a').forEach(link => {
-  link.addEventListener('click', () => {
-    navLinks.classList.remove('active');
+  navLinks.forEach(link => {
+    link.classList.remove('active');
+    if (link.getAttribute('href') === `#${current}`) {
+      link.classList.add('active');
+    }
   });
 });

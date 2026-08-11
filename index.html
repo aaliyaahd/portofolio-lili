@@ -1,146 +1,268 @@
 <!DOCTYPE html>
-<html lang="id" data-theme="dark">
+<html lang="en" data-theme="dark">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Portofolio Saya</title>
+  <title>Aliyah Daimah — Portfolio</title>
 
   <!-- Google Fonts & Font Awesome Icons -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
 
-  <!-- Menghubungkan ke Berkas CSS -->
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
 
-  <!-- Header Section -->
-  <header>
-    <nav class="navbar">
-      <a href="#" class="logo">&lt;DevPortfolio /&gt;</a>
-      
-      <div class="nav-right">
-        <button class="theme-toggle" id="themeToggle" aria-label="Toggle Theme">
-          <i class="fa-solid fa-moon"></i>
-        </button>
+  <!-- Floating Navigation Bar Kapsul -->
+  <nav class="floating-nav">
+    <div class="nav-container">
+      <a href="#home" class="nav-link active">Home</a>
+      <a href="#experiences" class="nav-link">Experiences</a>
+      <a href="#projects" class="nav-link">Projects</a>
+      <a href="#contact" class="nav-link">Contact Me</a>
+      <button class="theme-toggle" id="themeToggle" aria-label="Toggle Theme">
+        <i class="fa-solid fa-sun"></i>
+      </button>
+    </div>
+  </nav>
 
-        <button class="menu-toggle" id="menuToggle" aria-label="Toggle Menu">
-          <i class="fa-solid fa-bars"></i>
-        </button>
-
-        <ul class="nav-links" id="navLinks">
-          <li><a href="#about">Tentang</a></li>
-          <li><a href="#projects">Proyek</a></li>
-          <li><a href="#tech">Tech Stack</a></li>
-          <li><a href="#contact">Kontak</a></li>
-        </ul>
-      </div>
-    </nav>
-  </header>
-
-  <!-- Main Content -->
+  <!-- Main Container -->
   <main class="container">
 
-    <!-- About / Hero Section -->
-    <section id="about" class="hero">
-      <!-- Container untuk tata letak Foto + Teks -->
-      <div class="hero-content">
-        <!-- Foto Profil -->
-        <img src="foto-profil.jpeg" alt="Aliyah Daimah" class="profile-img" />
-        
-        <!-- Teks Perkenalan -->
-        <div class="hero-text">
-          <h1>Hi, I'm <span class="highlight">Aliyah</span> 👋</h1>
+    <!-- Hero / Home Section -->
+    <section id="home" class="hero">
+      <div class="hero-top">
+        <span class="greeting">👋 Hi, I'm Aliyah Daimah</span>
+        <h1 class="main-title">Mathematics Student & <br><span class="text-highlight">Web Developer|</span></h1>
+      </div>
+
+      <div class="hero-body">
+        <div class="profile-frame">
+          <img src="foto-profil.jpeg" alt="Aliyah Daimah" class="profile-img" />
+        </div>
+        <div class="hero-bio">
           <p>
-            I'm an Undergraduate Mathematics Student at Universitas Airlangga (UNAIR) passionate about web development, logical problem-solving, and data exploration. I love building interactive, functional, and user-friendly web applications.
+            I'm an <span class="badge-text">Undergraduate Mathematics Student</span> at Universitas Airlangga (UNAIR) passionate about web development, algorithm optimization, and data exploration. I love building interactive, functional, and clean web applications.
           </p>
-          <div class="social-links" id="contact">
-            <a href="https://github.com/aaliyaahd" target="_blank" class="btn btn-secondary">
-              <i class="fa-brands fa-github"></i> GitHub
-            </a>
-            <a href="mailto:aliyahdaimah@gmail.com" class="btn btn-primary">
-              <i class="fa-solid fa-envelope"></i> Send Email
-            </a>
-          </div>
+          <p>
+            While I'm <span class="badge-text">driven by curiosity</span> and continuous learning, I enjoy solving <span class="badge-text">real-world challenges</span> through code, mathematical optimization, and intuitive UI design.
+          </p>
         </div>
       </div>
     </section>
 
-    <!-- Projects Section Ala Blog -->
-    <section id="projects">
-      <h2 class="section-title">Projects & Showcase</h2>
+    <!-- Experience Section -->
+    <section id="experiences" class="section">
+      <div class="section-header">
+        <h2 class="section-title">Experience & Leadership</h2>
+        <p class="section-subtitle">A quick journey through my organizational roles, sponsorships, and university events 🚀</p>
+      </div>
+
+      <div class="timeline">
+
+        <!-- 1. GERDES Jilid XI -->
+        <div class="timeline-item">
+          <div class="timeline-dot"></div>
+          <div class="timeline-meta">
+            <span class="date">Jun 2025 - Aug 2025</span>
+            <span class="location">BEM UNAIR</span>
+          </div>
+          <h3 class="role-title">Sponsor Division Member — <span class="role-type">GERDES (Gerbang Desa) Jilid XI</span></h3>
+          <p class="role-desc">
+            Responsible for seeking and securing sponsorships, building partnerships, and managing communications with potential sponsors to support the community development program organized by BEM UNAIR.
+          </p>
+          <div class="tech-chips">
+            <span class="chip">Sponsorship</span>
+            <span class="chip">Partnership</span>
+            <span class="chip">Community Service</span>
+          </div>
+        </div>
+
+        <!-- 2. PEMABA HIMATIKA -->
+        <div class="timeline-item">
+          <div class="timeline-dot"></div>
+          <div class="timeline-meta">
+            <span class="date">May 2025 - Nov 2025</span>
+            <span class="location">Airlangga University</span>
+          </div>
+          <h3 class="role-title">Secretariat Division Member — <span class="role-type">PEMABA HIMATIKA 2025</span></h3>
+          <p class="role-desc">
+            Designed visual needs for new Mathematics students (class books, ID cards, name tags, attendance lists) and managed student orientation data.
+          </p>
+          <div class="tech-chips">
+            <span class="chip">Data Management</span>
+            <span class="chip">Visual Design</span>
+            <span class="chip">Administration</span>
+          </div>
+        </div>
+
+        <!-- 3. Get To Know to Airlangga -->
+        <div class="timeline-item">
+          <div class="timeline-dot"></div>
+          <div class="timeline-meta">
+            <span class="date">Sep 2025 - Jan 2026</span>
+            <span class="location">Airlangga University</span>
+          </div>
+          <h3 class="role-title">Sponsor Division Member — <span class="role-type">Get To Know to Airlangga</span></h3>
+          <p class="role-desc">
+            Formulated sponsorship proposals, negotiated with media partners and potential sponsors. Successfully secured <strong>Coca-Cola</strong> as an event sponsor.
+          </p>
+          <div class="tech-chips">
+            <span class="chip">Sponsorship</span>
+            <span class="chip">Negotiation</span>
+            <span class="chip">Public Relations</span>
+          </div>
+        </div>
+
+        <!-- 4. Dekan Cup FST -->
+        <div class="timeline-item">
+          <div class="timeline-dot"></div>
+          <div class="timeline-meta">
+            <span class="date">Aug 2025 - Sep 2025</span>
+            <span class="location">Airlangga University</span>
+          </div>
+          <h3 class="role-title">Sponsor Division Member — <span class="role-type">Dekan Cup FST 2025</span></h3>
+          <p class="role-desc">
+            Pitched and negotiated event sponsorship proposals across sports and arts competitions. Successfully secured <strong>Telkomsel</strong> as an official sponsor.
+          </p>
+          <div class="tech-chips">
+            <span class="chip">Sponsorship</span>
+            <span class="chip">Corporate Communication</span>
+          </div>
+        </div>
+
+        <!-- 5. Reformafest FST -->
+        <div class="timeline-item">
+          <div class="timeline-dot"></div>
+          <div class="timeline-meta">
+            <span class="date">Jun 2025 - Nov 2025</span>
+            <span class="location">Airlangga University</span>
+          </div>
+          <h3 class="role-title">Sponsor Division Member — <span class="role-type">Reformafest FST 2025</span></h3>
+          <p class="role-desc">
+            Created attractive proposals and pitched to potential media partners and sponsors to support high school debate & seminar events focusing on SDGs.
+          </p>
+          <div class="tech-chips">
+            <span class="chip">Sponsorship Proposal</span>
+            <span class="chip">Partnership</span>
+          </div>
+        </div>
+
+        <!-- 6. PENDEKAR FST -->
+        <div class="timeline-item">
+          <div class="timeline-dot"></div>
+          <div class="timeline-meta">
+            <span class="date">May 2025 - Aug 2025</span>
+            <span class="location">Airlangga University</span>
+          </div>
+          <h3 class="role-title">Group Facilitator Member — <span class="role-type">PENDEKAR FST 2025</span></h3>
+          <p class="role-desc">
+            Guided and facilitated new FST students through character development programs, acting as the primary liaison between students and the committee.
+          </p>
+          <div class="tech-chips">
+            <span class="chip">Mentorship</span>
+            <span class="chip">Leadership</span>
+            <span class="chip">Facilitation</span>
+          </div>
+        </div>
+
+        <!-- 7. Abdi Desa Rawatungga -->
+        <div class="timeline-item">
+          <div class="timeline-dot"></div>
+          <div class="timeline-meta">
+            <span class="date">Nov 2024 - Jan 2025</span>
+            <span class="location">Airlangga University</span>
+          </div>
+          <h3 class="role-title">Sponsor Division Member — <span class="role-type">Abdi Desa Rawatungga</span></h3>
+          <p class="role-desc">
+            Executed creative fundraising initiatives (merchandise sales, open donation) and secured <strong>Cheers Brand</strong> as a community sponsor for Tuban village outreach.
+          </p>
+          <div class="tech-chips">
+            <span class="chip">Community Service</span>
+            <span class="chip">Fundraising</span>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="section">
+      <div class="section-header">
+        <h2 class="section-title">Featured Projects</h2>
+        <p class="section-subtitle">Web applications & analytical tools built with code and logic</p>
+      </div>
+
       <div class="projects-grid">
 
         <!-- Project 1 -->
-        <a href="https://optimasi-menu-mbg.vercel.app/" target="_blank" class="project-card">
-          <div class="project-info">
-            <h3>MBG Menu Optimization</h3>
-            <p>Web application calculating & optimizing menu combinations using mathematical approaches.</p>
-            <div class="project-tags">
-              <span class="tag">JavaScript</span>
-              <span class="tag">Optimization</span>
-            </div>
+        <a href="https://github.com/aaliyaahd" target="_blank" class="project-card">
+          <div class="project-header">
+            <h3>MBG Menu Optimization Web</h3>
+            <span class="badge">Web App</span>
           </div>
-          <div class="open-icon">
-            <i class="fa-solid fa-arrow-up-right-from-square"></i>
+          <p>Calculates and optimizes MBG (Makan Bergizi Gratis) menu combinations using mathematical optimization algorithms.</p>
+          <div class="tech-chips">
+            <span class="chip">JavaScript</span>
+            <span class="chip">Optimization</span>
+            <span class="chip">HTML/CSS</span>
           </div>
         </a>
 
         <!-- Project 2 -->
-        <a href="https://tower-of-hanoi-roan.vercel.app/" target="_blank" class="project-card">
-          <div class="project-info">
-            <h3>Tower of Hanoi Visualizer</h3>
-            <p>Interactive web simulation demonstrating Data Structures (Stack) & Recursion.</p>
-            <div class="project-tags">
-              <span class="tag">Algorithm</span>
-              <span class="tag">Data Structure</span>
-            </div>
+        <a href="https://github.com/aaliyaahd" target="_blank" class="project-card">
+          <div class="project-header">
+            <h3>Tower of Hanoi Game Visualizer</h3>
+            <span class="badge">Game & Algo</span>
           </div>
-          <div class="open-icon">
-            <i class="fa-solid fa-arrow-up-right-from-square"></i>
+          <p>Interactive web simulation of the classic Tower of Hanoi puzzle, demonstrating Data Structures (Stack) and Recursion.</p>
+          <div class="tech-chips">
+            <span class="chip">Algorithms</span>
+            <span class="chip">Data Structures</span>
+            <span class="chip">JavaScript</span>
           </div>
         </a>
 
         <!-- Project 3 -->
-        <a href="https://donatur-mission-and-care.vercel.app/" target="_blank" class="project-card">
-          <div class="project-info">
-            <h3>Church Donor & Event Portal</h3>
-            <p>Dynamic portal with admin management to edit activities, schedule, and donations.</p>
-            <div class="project-tags">
-              <span class="tag">Dynamic Web</span>
-              <span class="tag">Admin Dashboard</span>
-            </div>
+        <a href="https://github.com/aaliyaahd" target="_blank" class="project-card">
+          <div class="project-header">
+            <h3>Travel Itinerary Website</h3>
+            <span class="badge">Web App</span>
           </div>
-          <div class="open-icon">
-            <i class="fa-solid fa-arrow-up-right-from-square"></i>
+          <p>Interactive website designed for planning and managing custom travel itineraries efficiently.</p>
+          <div class="tech-chips">
+            <span class="chip">HTML/CSS</span>
+            <span class="chip">JavaScript</span>
+            <span class="chip">UI/UX</span>
           </div>
         </a>
 
       </div>
     </section>
 
-    <!-- Current Tech Stack Section -->
-    <section id="tech">
-      <h2 class="section-title"><i class="fa-solid fa-layer-group"></i> Current Tech Stack</h2>
-      <div class="tech-grid">
-        <div class="tech-item"><i class="fa-brands fa-html5" style="color: #e34f26;"></i> HTML5</div>
-        <div class="tech-item"><i class="fa-brands fa-css3-alt" style="color: #1572b6;"></i> CSS3</div>
-        <div class="tech-item"><i class="fa-brands fa-js" style="color: #f7df1e;"></i> JavaScript</div>
-        <div class="tech-item"><i class="fa-brands fa-c" style="color: #00599c;"></i> C++</div>
-        <div class="tech-item"><i class="fa-brands fa-github"></i> Git / GitHub</div>
+    <!-- Contact Section -->
+    <section id="contact" class="section">
+      <h2 class="section-title">Get in Touch</h2>
+      <p class="section-subtitle">Feel free to reach out for collaborations or just a friendly chat!</p>
+      
+      <div class="contact-links">
+        <a href="mailto:aliyahdaimah@gmail.com" class="contact-btn">
+          <i class="fa-solid fa-envelope"></i> aliyahdaimah@gmail.com
+        </a>
+        <a href="https://github.com/aaliyaahd" target="_blank" class="contact-btn">
+          <i class="fa-brands fa-github"></i> GitHub
+        </a>
       </div>
     </section>
 
   </main>
 
-  <!-- Footer -->
   <footer>
-    <p>&copy; 2026 Portofolio Saya. Dibuat dengan HTML, CSS, & JS.</p>
+    <p>&copy; 2026 Aliyah Daimah. Designed & Built with passion.</p>
   </footer>
 
-  <!-- Menghubungkan ke Berkas JavaScript -->
   <script src="script.js"></script>
 </body>
 </html>
