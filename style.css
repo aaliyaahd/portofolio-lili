@@ -116,8 +116,6 @@ body {
 
 .text-highlight {
   color: var(--text-color);
-  border-right: 3px solid var(--accent-color);
-  padding-right: 4px;
 }
 
 .hero-body {
@@ -345,5 +343,26 @@ footer {
   .nav-link {
     padding: 0.4rem 0.8rem;
     font-size: 0.8rem;
+  }
+}
+
+/* Page Switching Animation */
+.section-page {
+  display: none;
+}
+
+.section-page.active-page {
+  display: block;
+  animation: fadeIn 0.3s ease-in-out;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(8px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
   }
 }

@@ -15,7 +15,7 @@ if (themeToggleBtn) {
   });
 }
 
-// Typing Effect Animation (Dibungkus DOMContentLoaded agar tidak macet)
+// Typing Effect Animation
 document.addEventListener('DOMContentLoaded', () => {
   const typedTarget = document.getElementById('typed');
   if (typedTarget && typeof Typed !== 'undefined') {
@@ -29,26 +29,35 @@ document.addEventListener('DOMContentLoaded', () => {
   }
 });
 
-// Active Link Highlight on Scroll
-const sections = document.querySelectorAll('section');
-const navLinks = document.querySelectorAll('.nav-link');
-
-window.addEventListener('scroll', () => {
-  let current = '';
-  // Menggunakan window.scrollY yang modern
-  const scrollPosition = window.scrollY || window.pageYOffset;
-
-  sections.forEach(section => {
-    const sectionTop = section.offsetTop;
-    if (scrollPosition >= sectionTop - 150) {
-      current = section.getAttribute('id');
-    }
-  });
+// Tab Navigation Switcher (Menggantikan Scroll Listener)
+document.addEventListener('DOMContentLoaded', () => {
+  const navLinks = document.querySelectorAll('.nav-link');
+  const pages = document.querySelectorAll('.section-page');
 
   navLinks.forEach(link => {
-    link.classList.remove('active');
-    if (link.getAttribute('href') === `#${current}`) {
+    link.addEventListener('click', (e) => {
+      e.preventDefault();
+      
+      // 1. Ambil ID target dari atribut href (misal: #experiences -> experiences)
+      const targetId = link.getAttribute('href').replace('#', '');
+      
+      // 2. Lepas kelas active dari semua tombol navbar
+      navLinks.forEach(l => l.classList.remove('active'));
+      
+      // 3. Tambahkan kelas active ke tombol navbar yang baru diklik
       link.classList.add('active');
-    }
+      
+      // 4. Sembunyikan semua section
+      pages.forEach(page => page.classList.remove('active-page'));
+      
+      // 5. Tampilkan section yang dituju
+      const targetPage = document.getElementById(targetId);
+      if (targetPage) {
+        targetPage.classList.add('active-page');
+      }
+
+      // Scroll halus ke atas saat pindah tab
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    });
   });
 });
