@@ -13,6 +13,8 @@
 
   <link rel="stylesheet" href="style.css" />
 </head>
+<script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
+<script src="script.js"></script>
 <body>
 
   <!-- Floating Navigation Bar Kapsul -->
@@ -35,8 +37,12 @@
     <section id="home" class="hero">
       <div class="hero-top">
         <span class="greeting">👋 Hi, I'm Aliyah Daimah</span>
-        <h1 class="main-title">Mathematics Student & <br><span class="text-highlight">Web Developer|</span></h1>
+        <h1 class="main-title">
+          Mathematics Student <br>
+          <span id="typed" class="text-highlight"></span>
+        </h1>
       </div>
+    </section>
 
       <div class="hero-body">
         <div class="profile-frame">
@@ -192,13 +198,27 @@
     <section id="projects" class="section">
       <div class="section-header">
         <h2 class="section-title">Featured Projects</h2>
-        <p class="section-subtitle">Web applications & analytical tools built with code and logic</p>
+        <p class="section-subtitle">Web applications & tools built with code and logic 🚀</p>
       </div>
 
       <div class="projects-grid">
 
-        <!-- Project 1 -->
-        <a href="https://github.com/aaliyaahd" target="_blank" class="project-card">
+        <!-- Project 1: Donatur Gereja -->
+        <a href="https://donatur-mission-and-care.vercel.app/" target="_blank" class="project-card">
+          <div class="project-header">
+            <h3>Church Donor Management Web</h3>
+            <span class="badge">Web App</span>
+          </div>
+          <p>A web application built to organize, track, and manage donor contributions and record keeping efficiently.</p>
+          <div class="tech-chips">
+            <span class="chip">HTML/CSS</span>
+            <span class="chip">JavaScript</span>
+            <span class="chip">Database</span>
+          </div>
+        </a>
+
+        <!-- Project 2: MBG Optimization -->
+        <a href="https://optimasi-menu-mbg.vercel.app/" target="_blank" class="project-card">
           <div class="project-header">
             <h3>MBG Menu Optimization Web</h3>
             <span class="badge">Web App</span>
@@ -211,8 +231,8 @@
           </div>
         </a>
 
-        <!-- Project 2 -->
-        <a href="https://github.com/aaliyaahd" target="_blank" class="project-card">
+        <!-- Project 3: Tower of Hanoi -->
+        <a href="https://tower-of-hanoi-roan.vercel.app/" target="_blank" class="project-card">
           <div class="project-header">
             <h3>Tower of Hanoi Game Visualizer</h3>
             <span class="badge">Game & Algo</span>
@@ -222,20 +242,6 @@
             <span class="chip">Algorithms</span>
             <span class="chip">Data Structures</span>
             <span class="chip">JavaScript</span>
-          </div>
-        </a>
-
-        <!-- Project 3 -->
-        <a href="https://github.com/aaliyaahd" target="_blank" class="project-card">
-          <div class="project-header">
-            <h3>Travel Itinerary Website</h3>
-            <span class="badge">Web App</span>
-          </div>
-          <p>Interactive website designed for planning and managing custom travel itineraries efficiently.</p>
-          <div class="tech-chips">
-            <span class="chip">HTML/CSS</span>
-            <span class="chip">JavaScript</span>
-            <span class="chip">UI/UX</span>
           </div>
         </a>
 

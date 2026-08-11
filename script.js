@@ -13,6 +13,14 @@ themeToggleBtn.addEventListener('click', () => {
     : '<i class="fa-solid fa-moon"></i>';
 });
 
+var typed = new Typed('#typed', {
+  strings: ['Web Developer', 'Data Analyst'],
+  typeSpeed: 70,
+  backSpeed: 50,
+  backDelay: 1500,
+  loop: true
+});
+
 // Active Link Highlight on Scroll
 const sections = document.querySelectorAll('section');
 const navLinks = document.querySelectorAll('.nav-link');
