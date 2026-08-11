@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="id" data-theme="dark">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Portofolio Saya</title>
+
+  <!-- Google Fonts & Font Awesome Icons -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+
+  <!-- Menghubungkan ke Berkas CSS -->
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- Header Section -->
+  <header>
+    <nav class="navbar">
+      <a href="#" class="logo">&lt;DevPortfolio /&gt;</a>
+      
+      <div class="nav-right">
+        <button class="theme-toggle" id="themeToggle" aria-label="Toggle Theme">
+          <i class="fa-solid fa-moon"></i>
+        </button>
+
+        <button class="menu-toggle" id="menuToggle" aria-label="Toggle Menu">
+          <i class="fa-solid fa-bars"></i>
+        </button>
+
+        <ul class="nav-links" id="navLinks">
+          <li><a href="#about">Tentang</a></li>
+          <li><a href="#projects">Proyek</a></li>
+          <li><a href="#tech">Tech Stack</a></li>
+          <li><a href="#contact">Kontak</a></li>
+        </ul>
+      </div>
+    </nav>
+  </header>
+
+  <!-- Main Content -->
+  <main class="container">
+
+    <!-- About / Hero Section -->
+    <section id="about" class="hero">
+      <!-- Container untuk tata letak Foto + Teks -->
+      <div class="hero-content">
+        <!-- Foto Profil -->
+        <img src="foto-profil.jpeg" alt="Aliyah Daimah" class="profile-img" />
+        
+        <!-- Teks Perkenalan -->
+        <div class="hero-text">
+          <h1>Hi, I'm <span class="highlight">Aliyah</span> 👋</h1>
+          <p>
+            I'm an Undergraduate Mathematics Student at Universitas Airlangga (UNAIR) passionate about web development, logical problem-solving, and data exploration. I love building interactive, functional, and user-friendly web applications.
+          </p>
+          <div class="social-links" id="contact">
+            <a href="https://github.com/aaliyaahd" target="_blank" class="btn btn-secondary">
+              <i class="fa-brands fa-github"></i> GitHub
+            </a>
+            <a href="mailto:aliyahdaimah@gmail.com" class="btn btn-primary">
+              <i class="fa-solid fa-envelope"></i> Send Email
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects">
+      <h2 class="section-title"><i class="fa-solid fa-laptop-code"></i> Web Projects</h2>
+      <div class="projects-grid">
+
+        <!-- Project Card 1: MBG Menu Optimization -->
+        <div class="project-card">
+          <div>
+            <h3>MBG Menu Optimization Web</h3>
+            <p>A web application built to calculate and optimize MBG (Makan Bergizi Gratis) menu combinations using mathematical optimization approaches. (Coursework Project)</p>
+            <div class="project-tags">
+              <span class="tag">HTML/CSS</span>
+              <span class="tag">JavaScript</span>
+              <span class="tag">Optimization</span>
+            </div>
+          </div>
+          <a href="https://optimasi-menu-mbg.vercel.app/" target="_blank" class="btn btn-primary">
+            Open Web <i class="fa-solid fa-arrow-up-right-from-square"></i>
+          </a>
+        </div>
+
+        <!-- Project Card 2: Tower of Hanoi -->
+        <div class="project-card">
+          <div>
+            <h3>Tower of Hanoi Visualizer</h3>
+            <p>An interactive web simulation of the classic Tower of Hanoi puzzle, designed to visualize and demonstrate the Data Structure Concept of Stacks and Recursion.</p>
+            <div class="project-tags">
+              <span class="tag">JavaScript</span>
+              <span class="tag">Data Structures</span>
+              <span class="tag">Algorithm</span>
+            </div>
+          </div>
+          <a href="https://tower-of-hanoi-roan.vercel.app/" target="_blank" class="btn btn-primary">
+            Open Web <i class="fa-solid fa-arrow-up-right-from-square"></i>
+          </a>
+        </div>
+
+        <!-- Project Card 3: Church Donation & Event Management -->
+        <div class="project-card">
+          <div>
+            <h3>Church Donor & Event System</h3>
+            <p>A dynamic web portal for church donors featuring an admin management dashboard to dynamically edit event schedules, activities, and donation details.</p>
+            <div class="project-tags">
+              <span class="tag">Dynamic Web</span>
+              <span class="tag">Admin Dashboard</span>
+              <span class="tag">Database</span>
+            </div>
+          </div>
+          <a href="https://donatur-mission-and-care.vercel.app/" target="_blank" class="btn btn-primary">
+            Open Web <i class="fa-solid fa-arrow-up-right-from-square"></i>
+          </a>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- Current Tech Stack Section -->
+    <section id="tech">
+      <h2 class="section-title"><i class="fa-solid fa-layer-group"></i> Current Tech Stack</h2>
+      <div class="tech-grid">
+        <div class="tech-item"><i class="fa-brands fa-html5" style="color: #e34f26;"></i> HTML5</div>
+        <div class="tech-item"><i class="fa-brands fa-css3-alt" style="color: #1572b6;"></i> CSS3</div>
+        <div class="tech-item"><i class="fa-brands fa-js" style="color: #f7df1e;"></i> JavaScript</div>
+        <div class="tech-item"><i class="fa-brands fa-c" style="color: #00599c;"></i> C++</div>
+        <div class="tech-item"><i class="fa-brands fa-github"></i> Git / GitHub</div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- Footer -->
+  <footer>
+    <p>&copy; 2026 Portofolio Saya. Dibuat dengan HTML, CSS, & JS.</p>
+  </footer>
+
+  <!-- Menghubungkan ke Berkas JavaScript -->
+  <script src="script.js"></script>
+</body>
+</html>
