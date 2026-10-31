@@ -661,3 +661,16 @@ footer {
   color: var(--text-muted);
   font-size: 0.85rem;
 }
+
+/* Preview langsung (iframe) - diskalakan lewat script.js agar pas dengan kartu */
+.project-thumb iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 1280px;
+  height: 800px;
+  border: 0;
+  background: #fff;
+  transform-origin: top left;
+  pointer-events: none;
+}

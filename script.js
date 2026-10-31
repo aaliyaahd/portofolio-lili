@@ -75,17 +75,13 @@ document.addEventListener('DOMContentLoaded', () => {
   });
 });
 
-// Project preview: coba gambar lokal (images/...), kalau tidak ada pakai screenshot live, kalau gagal tampilkan placeholder
+// Project preview: tampilkan situs langsung (iframe 1280x800) dan skalakan agar pas dengan lebar kartu
 document.addEventListener('DOMContentLoaded', () => {
-  document.querySelectorAll('.project-thumb img').forEach(img => {
-    img.addEventListener('error', () => {
-      const fallback = img.dataset.fallback;
-      if (fallback && img.src !== fallback) {
-        img.src = fallback;
-        img.removeAttribute('data-fallback');
-      } else {
-        img.closest('.project-thumb').classList.add('is-empty');
-      }
-    });
+  document.querySelectorAll('.project-thumb').forEach(thumb => {
+    const frame = thumb.querySelector('iframe');
+    if (!frame) return;
+    const fit = () => { frame.style.transform = `scale(${thumb.clientWidth / 1280})`; };
+    fit();
+    new ResizeObserver(fit).observe(thumb);
   });
 });
