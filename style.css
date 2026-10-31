@@ -537,3 +537,127 @@ footer {
   box-shadow: 0 4px 14px rgba(59, 130, 246, 0.4);
   transform: translateY(-2px);
 }
+
+/* ==========================================
+   TECHNOLOGIES MARQUEE (bergerak ke kiri)
+   ========================================== */
+.tech-section {
+  margin-top: 5rem;
+}
+
+.tech-title {
+  font-size: 1.6rem;
+}
+
+.marquee-card {
+  margin-top: 1.8rem;
+  background-color: var(--card-bg);
+  border: 1px solid var(--border-color);
+  border-radius: 24px;
+  padding: 2rem 0;
+}
+
+.marquee {
+  overflow: hidden;
+  -webkit-mask-image: linear-gradient(90deg, transparent, #000 10%, #000 90%, transparent);
+  mask-image: linear-gradient(90deg, transparent, #000 10%, #000 90%, transparent);
+}
+
+.marquee-track {
+  display: flex;
+  width: max-content;
+  animation: marquee-left 32s linear infinite;
+}
+
+.marquee:hover .marquee-track {
+  animation-play-state: paused;
+}
+
+/* margin (bukan gap) supaya dua rombongan item sama persis lebarnya -> loop mulus */
+.tech-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.7rem;
+  min-width: 84px;
+  margin-right: 3rem;
+  color: var(--text-muted);
+}
+
+.tech-item i {
+  font-size: 2.6rem;
+  line-height: 1;
+}
+
+.tech-item span {
+  font-size: 0.8rem;
+  font-weight: 500;
+  white-space: nowrap;
+}
+
+.tech-item:hover {
+  color: var(--text-color);
+}
+
+@keyframes marquee-left {
+  from { transform: translateX(0); }
+  to   { transform: translateX(-50%); }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .marquee-track {
+    animation: none;
+    width: auto;
+    flex-wrap: wrap;
+    justify-content: center;
+    row-gap: 1.5rem;
+  }
+  .marquee-track .is-clone {
+    display: none;
+  }
+  .marquee {
+    -webkit-mask-image: none;
+    mask-image: none;
+  }
+}
+
+/* ==========================================
+   PROJECT PREVIEW IMAGE
+   ========================================== */
+.project-thumb {
+  position: relative;
+  aspect-ratio: 16 / 10;
+  margin-top: 1.4rem;
+  overflow: hidden;
+  border-radius: 12px;
+  border: 1px solid var(--border-color);
+  background-color: var(--chip-bg);
+}
+
+.project-thumb img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: top;
+  transition: transform 0.4s ease;
+}
+
+.project-card:hover .project-thumb img {
+  transform: scale(1.03);
+}
+
+.project-thumb.is-empty img {
+  display: none;
+}
+
+.project-thumb.is-empty::after {
+  content: "Preview not available";
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--text-muted);
+  font-size: 0.85rem;
+}

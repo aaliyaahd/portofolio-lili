@@ -11,6 +11,7 @@
   <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
 
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.16.0/devicon.min.css" />
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
@@ -53,7 +54,36 @@
           </p>
         </div>
       </div>
-    </section> 
+      <!-- Technologies (bergerak ke kiri) -->
+      <div class="tech-section">
+        <h2 class="section-title tech-title">Technologies</h2>
+        <p class="section-subtitle">Tools and skills I use day to day</p>
+
+        <div class="marquee-card">
+          <div class="marquee">
+            <div class="marquee-track" id="marqueeTrack">
+              <div class="tech-item"><i class="devicon-html5-plain"></i><span>HTML5</span></div>
+              <div class="tech-item"><i class="devicon-css3-plain"></i><span>CSS3</span></div>
+              <div class="tech-item"><i class="devicon-javascript-plain"></i><span>JavaScript</span></div>
+              <div class="tech-item"><i class="devicon-python-plain"></i><span>Python</span></div>
+              <div class="tech-item"><i class="devicon-cplusplus-plain"></i><span>C++</span></div>
+              <div class="tech-item"><i class="devicon-matlab-plain"></i><span>MATLAB</span></div>
+              <div class="tech-item"><i class="fa-solid fa-file-excel"></i><span>Microsoft Excel</span></div>
+              <div class="tech-item"><i class="fa-solid fa-chart-simple"></i><span>Minitab</span></div>
+              <div class="tech-item"><i class="fa-solid fa-calculator"></i><span>WinQSB</span></div>
+              <div class="tech-item"><i class="devicon-git-plain"></i><span>Git</span></div>
+              <div class="tech-item"><i class="devicon-github-original"></i><span>GitHub</span></div>
+              <div class="tech-item"><i class="devicon-vercel-original"></i><span>Vercel</span></div>
+              <div class="tech-item"><i class="devicon-vscode-plain"></i><span>VS Code</span></div>
+              <div class="tech-item"><i class="fa-solid fa-bullseye"></i><span>Optimization</span></div>
+              <div class="tech-item"><i class="fa-solid fa-chart-line"></i><span>Data Exploration</span></div>
+              <div class="tech-item"><i class="fa-solid fa-pen-ruler"></i><span>UI Design</span></div>
+              <div class="tech-item"><i class="fa-solid fa-handshake"></i><span>Sponsorship</span></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
 
     <!-- Experience Section -->
     <section id="experiences" class="section-page">
@@ -199,8 +229,7 @@
 
       <div class="projects-grid">
 
-        <!-- Project 1: Donatur Gereja -->
-        <a href="https://donatur-mission-and-care.vercel.app/" target="_blank" class="project-card">
+        <a href="https://donatur-mission-and-care.vercel.app/" target="_blank" rel="noopener" class="project-card">
           <div class="project-header">
             <h3>Church Donor Management Web</h3>
             <span class="badge">Web App</span>
@@ -211,10 +240,13 @@
             <span class="chip">JavaScript</span>
             <span class="chip">Database</span>
           </div>
+          <!-- Preview: taruh screenshot sendiri di folder images/ (nama file di bawah). Kalau belum ada, otomatis pakai screenshot live dari situsnya. -->
+          <div class="project-thumb">
+            <img src="images/donatur.jpeg" data-fallback="https://image.thum.io/get/width/1200/crop/750/https://donatur-mission-and-care.vercel.app/" alt="Preview of the Church Donor Management Web" loading="lazy" />
+          </div>
         </a>
 
-        <!-- Project 2: MBG Optimization -->
-        <a href="https://optimasi-menu-mbg.vercel.app/" target="_blank" class="project-card">
+        <a href="https://optimasi-menu-mbg.vercel.app/" target="_blank" rel="noopener" class="project-card">
           <div class="project-header">
             <h3>MBG Menu Optimization Web</h3>
             <span class="badge">Web App</span>
@@ -225,13 +257,16 @@
             <span class="chip">Optimization</span>
             <span class="chip">HTML/CSS</span>
           </div>
+          <!-- Preview: taruh screenshot sendiri di folder images/ (nama file di bawah). Kalau belum ada, otomatis pakai screenshot live dari situsnya. -->
+          <div class="project-thumb">
+            <img src="images/mbg.jpeg" data-fallback="https://image.thum.io/get/width/1200/crop/750/https://optimasi-menu-mbg.vercel.app/" alt="Preview of the MBG Menu Optimization Web" loading="lazy" />
+          </div>
         </a>
 
-        <!-- Project 3: Tower of Hanoi -->
-        <a href="https://tower-of-hanoi-roan.vercel.app/" target="_blank" class="project-card">
+        <a href="https://tower-of-hanoi-roan.vercel.app/" target="_blank" rel="noopener" class="project-card">
           <div class="project-header">
             <h3>Tower of Hanoi Game Visualizer</h3>
-            <span class="badge">Game & Algo</span>
+            <span class="badge">Game &amp; Algo</span>
           </div>
           <p>Interactive web simulation of the classic Tower of Hanoi puzzle, demonstrating Data Structures (Stack) and Recursion.</p>
           <div class="tech-chips">
@@ -239,13 +274,16 @@
             <span class="chip">Data Structures</span>
             <span class="chip">JavaScript</span>
           </div>
+          <!-- Preview: taruh screenshot sendiri di folder images/ (nama file di bawah). Kalau belum ada, otomatis pakai screenshot live dari situsnya. -->
+          <div class="project-thumb">
+            <img src="images/hanoi.jpeg" data-fallback="https://image.thum.io/get/width/1200/crop/750/https://tower-of-hanoi-roan.vercel.app/" alt="Preview of the Tower of Hanoi Game Visualizer" loading="lazy" />
+          </div>
         </a>
 
-        <!-- Project 4: Math Tower Race -->
-        <a href="https://aaliyaahd.github.io/MATH-TOWER-RACE/" target="_blank" class="project-card">
+        <a href="https://math-tower-race.vercel.app/" target="_blank" rel="noopener" class="project-card">
           <div class="project-header">
             <h3>Math Tower Race</h3>
-            <span class="badge">Math & Game</span>
+            <span class="badge">Math &amp; Game</span>
           </div>
           <p>Interactive educational game combining mathematics challenges with a fast-paced tower racing simulation, built using interactive web technologies.</p>
           <div class="tech-chips">
@@ -253,19 +291,9 @@
             <span class="chip">Mathematics</span>
             <span class="chip">JavaScript</span>
           </div>
-        </a>
-
-        <!-- Project 5: E-Commerce Analytics Dashboard -->
-        <a href="https://aaliyaahd.github.io/E-COMMERCE/" target="_blank" class="project-card">
-          <div class="project-header">
-            <h3>E-Commerce Analytics Dashboard</h3>
-            <span class="badge">Data Analytics</span>
-          </div>
-          <p>Professional business analytics dashboard featuring real-time KPI metric cards, interactive revenue trend charts, category distribution, and a searchable transaction table.</p>
-          <div class="tech-chips">
-            <span class="chip">Tailwind CSS</span>
-            <span class="chip">Chart.js</span>
-            <span class="chip">JavaScript</span>
+          <!-- Preview: taruh screenshot sendiri di folder images/ (nama file di bawah). Kalau belum ada, otomatis pakai screenshot live dari situsnya. -->
+          <div class="project-thumb">
+            <img src="images/math-tower.jpeg" data-fallback="https://image.thum.io/get/width/1200/crop/750/https://math-tower-race.vercel.app/" alt="Preview of Math Tower Race" loading="lazy" />
           </div>
         </a>
 
@@ -309,6 +337,18 @@
             <i class="fa-solid fa-arrow-up-right-from-square arrow-icon"></i>
           </a>
 
+          <a href="https://www.linkedin.com/in/aliyah-daimah" target="_blank" rel="noopener" class="contact-card">
+            <div class="contact-card-icon">
+              <i class="fa-brands fa-linkedin-in"></i>
+            </div>
+            <div class="contact-card-info">
+              <span class="contact-card-label">Connect With Me</span>
+              <span class="contact-card-val">linkedin.com/in/aliyah-daimah</span>
+            </div>
+            <i class="fa-solid fa-arrow-up-right-from-square arrow-icon"></i>
+          </a>
+        </div>
+
 
         <!-- Kolom Kanan: Call to Action Box -->
         <div class="contact-box">
@@ -321,6 +361,7 @@
             </a>
             </div>
         </div>
+      </div>
       </div>
     </section>
 

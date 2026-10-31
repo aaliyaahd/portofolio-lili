@@ -61,3 +61,31 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   });
 });
+
+// Technologies marquee: gandakan isi track supaya loop-nya tanpa putus
+document.addEventListener('DOMContentLoaded', () => {
+  const track = document.getElementById('marqueeTrack');
+  if (!track) return;
+
+  Array.from(track.children).forEach(item => {
+    const clone = item.cloneNode(true);
+    clone.classList.add('is-clone');
+    clone.setAttribute('aria-hidden', 'true');
+    track.appendChild(clone);
+  });
+});
+
+// Project preview: coba gambar lokal (images/...), kalau tidak ada pakai screenshot live, kalau gagal tampilkan placeholder
+document.addEventListener('DOMContentLoaded', () => {
+  document.querySelectorAll('.project-thumb img').forEach(img => {
+    img.addEventListener('error', () => {
+      const fallback = img.dataset.fallback;
+      if (fallback && img.src !== fallback) {
+        img.src = fallback;
+        img.removeAttribute('data-fallback');
+      } else {
+        img.closest('.project-thumb').classList.add('is-empty');
+      }
+    });
+  });
+});
